@@ -1,23 +1,26 @@
-const http = require('http');
+const express = require('express');
 const fetch = require('node-fetch');
 
-const server = http.createServer((req, res) => {
+const app = express();
+const PORT = 3000;
+
+app.use((req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
 
+app.get('/', (req, res) => {
     fetch('https://filipporzucek.github.io/FirstProtfolioProject/data.json')
         .then(response => response.json())
         .then(data => {
-            res.end(JSON.stringify(data));
+            res.send(JSON.stringify(data));
         })
         .catch(error => {
-            res.statusCode = 500;
-            res.end('Internal Server Error');
+            res.status(500).send('Internal Server Error');
         });
 });
 
-const PORT = 3000;
-
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
