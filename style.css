@@ -1069,6 +1069,20 @@ margin-left: -2%;
                 border: 2% solid white !important;
             
             }
+            .writing{
+                margin-top: 8.4%;
+                margin-left: 8%;
+                color: white;
+                font-size: 3.4vw !important;
+                
+                }
+                .writing2{
+                    margin-top: -1.8%;
+                    margin-left: 8.2%;
+                    color: white;
+                    font-size: 2.2vw !important;
+                    text-decoration: none;
+                }
             .plus{
                 color: white;
                 font-size: 4vw !important;
