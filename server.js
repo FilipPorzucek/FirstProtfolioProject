@@ -1,5 +1,5 @@
 const express = require('express');
-const fetch = require('node-fetch');
+const fs = require('fs');
 
 const app = express();
 const PORT = 3000;
@@ -11,14 +11,13 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    fetch('https://filipporzucek.github.io/FirstProtfolioProject/data.json')
-        .then(response => response.json())
-        .then(data => {
-            res.send(JSON.stringify(data));
-        })
-        .catch(error => {
+    fs.readFile('./public/data.json', 'utf8', (err, data) => {
+        if (err) {
             res.status(500).send('Internal Server Error');
-        });
+            return;
+        }
+        res.send(data);
+    });
 });
 
 app.listen(PORT, () => {
