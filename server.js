@@ -1,18 +1,19 @@
 const http = require('http');
-const fs = require('fs');
+const fetch = require('node-fetch');
 
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    fs.readFile('data.json', 'utf8', (err, data) => {
-        if (err) {
+    fetch('http://example.com/data.json')
+        .then(response => response.json())
+        .then(data => {
+            res.end(JSON.stringify(data));
+        })
+        .catch(error => {
             res.statusCode = 500;
             res.end('Internal Server Error');
-        } else {
-            res.end(data);
-        }
-    });
+        });
 });
 
 const PORT = 3000;
