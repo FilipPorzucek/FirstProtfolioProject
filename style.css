@@ -1130,7 +1130,7 @@ margin-left: -2%;
                     }
                     .line2 {
                         width: 0.12%; 
-                        height: 2vh;
+                        height: 1.6vh;
                    background-color: black;
                    display: inline-block;
                    margin-left: -0.1%;
@@ -1228,11 +1228,7 @@ margin-left: -2%;
                             font-size: 3.4vw !important; 
                             margin-top: 4% !important;
                             margin-left: 7% !important;
-                        
-                     
-                         
-                            
-                        
+
                         }
                         .arrow_forward{
                           
@@ -1261,14 +1257,14 @@ margin-left: -2%;
                         }
                         .line3 {
                             width: 0.12% !important; 
-                            height: 2vh !important; 
+                            height: 1.6vh !important; 
                             margin-top: 8% !important; 
                             
                         }
                     .interiors{
-                        margin-top: 8% !important;
+                        margin-top: 7.8% !important;
                     }
-
+                   
                     .logo3 {
                         margin-left: 8%;
                         display: inline;
@@ -1399,9 +1395,9 @@ margin-left: -2%;
             .flatPrice{
             position: absolute;
             margin-left: 56%;
-            margin-top: 9%;
+            margin-top: 20%;
         width: 26%;
-        font-size: 1.2vw;
+        font-size: 2.2vw;
         text-align: left;
         color: gray;
             }
@@ -1444,6 +1440,9 @@ margin-left: -2%;
                 margin-top: 0.2% !important;
 
             }
+         
+            
+         
             .floatTitle{
             
              margin-top:32%;
