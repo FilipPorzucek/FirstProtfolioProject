@@ -460,7 +460,7 @@ bedroom.addEventListener('mouseout', basic);
 
 
 
-const url = 'http://localhost:3000'; 
+const url = 'https://filipporzucek.github.io/FirstProtfolioProject/data.json'; 
 
 const flats = document.querySelector('.flats');
 fetch(url)
